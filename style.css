@@ -15,7 +15,7 @@
     background-color: rgb(133, 21, 21);
     padding:30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
 
 }
 .products{
@@ -57,12 +57,13 @@
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    background-color: black;
 }
 .itemDiv:hover{
     transform: scale(1.03);
 }
 .itemDiv img{
-    padding:10px 0 0 120px;
+    padding:10px;
 }
 .itemImg{
     padding-bottom: 20px;
@@ -92,4 +93,55 @@
 }
 .footText{
     line-height: 1.5;
+}
+.mode img{
+    margin-top: 10px;
+    width:40px;
+    height: 40px;
+}
+#moon{
+    background-color:rgb(133, 21, 21) ;
+}
+
+.about-container{
+    background-image: url(./img/about.avif);
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:rgb(133, 21, 21);
+    font-weight: bold;
+}
+.about{
+    position: absolute;
+     color: rgb(133, 21, 21);
+     font-size: 2em;
+     transform: translateY(200px);
+     left:70%;
+     padding:20px;
+}
+.homeAbout a{
+    text-decoration: none;
+   color:black;
+   margin-top: 20px;
+}
+.aboutDesc{
+    display: flex;
+    gap:50px;
+    padding:30px;
+    display: justify;
+    margin-bottom: 30px;
+}
+.Desc{
+    width:25%;
+}
+.video-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0 60px 90px;
+}
+
+.video-section video{
+    border-radius: 20px;
 }

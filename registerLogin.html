@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: lightblue;
+            justify-items: center;
+            background-image: url(./img/background.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:rgb(110, 22, 22);
+        }
+        .section-container{
+            display:flex;
+            width: 100%;
+        }
+        .form-container{
+
+            margin: 30px;
+            justify-items: center;
+            border: none;
+            width: 100%;
+            height: auto;
+            padding:0 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px rgb(101, 39, 39);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+}
+        .sec-container{
+             margin: 30px;
+            justify-items: center;
+            border: none;
+            width: 100%;
+            height: auto;
+            padding:0 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px rgb(87, 37, 37);
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 10px;
+            padding-top: 20px;
+        }
+        input{
+            height: auto;
+            border: none;
+            border-radius: 10px;
+            padding:10px;
+            outline: none;
+        }
+        label{
+            margin:10px 0 10px 0;
+            font-weight: bold;
+        }
+       
+        #conBtn{
+            margin-top: 20px;
+            border: none;
+            color:rgb(110, 22, 22);
+            border-radius: 10px;
+            padding:10px;
+            font-size: 2em;
+            font-weight: bold;
+            width:auto;
+        }
+        #conBtn:hover{
+            background-color:rgb(110, 22, 22) ;
+            color:white;
+        }   
+        #loginBtn{
+            margin-top: 20px;
+            color:rgb(110, 22, 22);
+            border: none;
+            border-radius: 10px;
+            padding:10px;
+            font-size: 2em;
+            font-weight: bold;
+            width:auto;
+            margin-bottom: 20px;
+        }
+        #loginBtn:hover{
+            background-color:rgb(110, 22, 22) ;
+            color:white;
+        }   
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="aboutUs.html">About Us</a>
+                <a href="registerLogin.html">Register/Login</a>
+                <a href="cart.html"><i class="fa fa-cart-plus" style="font-size:36px"></i></a>
+        </div>
+    <div class="section-container">
+        <div class="form-container">
+      
+            <div class="form">
+                <h1 id="signUp">Sign Up</h1>
+                <label>First Name:</label><input type="text" id="firstName" placeholder="Enter first Name">
+                <label>Last Name:</label><input type="text" id="lastName" placeholder="Enter last Name">
+                <label>Email:</label><input type="email" id="signUpmail" placeholder="Enter your email">
+                <label>Password:</label><input type="password" id="signUppass" placeholder="Enter your password">
+                <label>Confirm Password</label><input type="password" id="confpass" placeholder="Enter confirm password">
+                <center><button id="conBtn" onclick="signUp()">Confirm</button> </center>
+            </div>
+            
+        
+    </div>      
+        <div class="sec-container">
+            <div class="form">
+            <h1 id="login">Login</h1>
+            <label>Email:</label><input type="email" id="lemail" placeholder="Enter email">
+            <label>Password:</label><input type="password" id="lpass" placeholder="Enter password">
+            <center><button id="loginBtn" onclick="login()">Login</button></center>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footText">
+            <h1>Make Happiness with Us</h1>
+            <p>Buy products on Shop</p>
+            <p>Be Elegance with our products</p>
+            <p>Become an perfect human</p>
+            <p>Share your Happiness with others</p>
+            <p>›See More Make Happiness with Us</p>
+        </div>
+        <div class="footText">
+            <h1>Shop</h1>
+            <p>Shop is the next step on our mission to make commerce better for everyone.</p><p> Predicting the future is no small task but with a close eye on evolving trends and the pulse of consumer behavior.</p>
+            <p> In this blog, we will give 10 online shopping trends in 2026 driving consumer behavior and experience.</p><p> Now, let’s get discover!</p>
+        </div>
+        <div class="footText">
+            <h1>Contact with</h1>
+            <p>Phone:+959-688453</p>
+            <p>Email:shop@gmail.com</p>
+            <p>Address:Yangon,Myanmar</p>
+        </div>
+
+    </div>
+<script src="reg-login.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

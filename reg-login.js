@@ -15,12 +15,45 @@ function signUp(){
     
     if(password===confPass){
         localStorage.setItem("user",JSON.stringify(user))
+        addUser();
         alert("Sign Up Successfully");
     }
     else{
         alert("Two passwords must be match!!")
     }
+    
 }
+
+function addUser(){
+    const user=JSON.parse(localStorage.getItem("user"))
+    if(!user){
+        console.log("No user found")
+    }
+    const userName=user.firstName+" "+user.lastName;
+    const email=user.email;
+    const pass=user.password;
+    //console.log(userName,email,pass)
+    const addUser={userName,email,pass}
+    apiAdd(userName,email,pass)
+    
+}
+
+function apiAdd(uName,email,pass) {
+    const user={uName,email,pass}
+    console.log(user)
+    fetch("https://fakestoreapi.com/users",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json",
+        },
+        body: JSON.stringify(user),
+    })
+    .then((response)=>response.json())
+    .then((data)=>console.log(data))
+    .catch((err)=>{console.log(err)})
+}
+
+
 //login
 function login(){
     const loginEmail=document.getElementById("lemail").value
@@ -41,7 +74,7 @@ function logout(){
     alert("Logout successfully!!");
     window.location.href="index.html";
 }
-//dark mode & light mode
+/*dark mode & light mode
 const container=document.getElementById("container-bg")
 const moon=document.getElementById("moon")
 const sun=document.getElementById("sun")
@@ -84,3 +117,4 @@ const mode=localStorage.getItem("mode")
     sun.style.display="inline";
     moon.style.display="none";
  }
+    */

@@ -1,6 +1,6 @@
 const products=document.getElementById("products")
 
-async function getUser() {
+async function getProduct() {
     const imgDiv=document.createElement("div")
   try {
     const response = await fetch(
@@ -15,10 +15,8 @@ async function getUser() {
         <div class="descDiv">
         <h1 style="text-align:center">${item.category}</h1>
         <p>${item.title}</p>
-        <p class="pText">Price:</p>
-        <span>${item.price} $</span>
-        <p class="pText">Description:</p>
-        <p>${item.description}</p>
+        <p class="pText">Price:
+        <span>${item.price} $</span></p>
         </div>
         </div>
         `;
@@ -33,20 +31,26 @@ async function getUser() {
   }
  
 }
-getUser();
+getProduct();
+async function singleProduct(id){
+  localStorage.setItem("productID",id)
+  window.location.href="singleProduct.html";
+}
+const singleContainer=document.getElementById("single-container");
 
- async function singleProduct(id){
-  const singleContainer=document.getElementById("single-container");
-  console.log(id);
+ async function getsingleProduct(){
+  const id=localStorage.getItem("productID")
+  console.log(id)
 try{
-    const response=await fetch("https://fakestoreapi.com/products/id")
+    const response=await fetch("https://fakestoreapi.com/products/{id}")
     const data = await response.json();
-    window.location.href="singleProduct.html"; 
     const res=`<div>
     <p>Title:${data.title}</p>
+    <p>Description:${data.description}
     </div>
     `;
     singleContainer.innerHTML=res;
+    singleContainer.classList.add("singleContainer")
     console.log(res);
     return res;
 }
@@ -54,3 +58,5 @@ catch(err){
   console.log(err);
 }
 }
+getsingleProduct();
+

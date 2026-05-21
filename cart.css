@@ -1,0 +1,11 @@
+#field{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.count{
+    position: absolute;
+    left:89%;
+    transform: translateY(-80px);
+    
+}

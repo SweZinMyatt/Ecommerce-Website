@@ -6,9 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
     <style>
         body{
-            background-color: lightblue;
             justify-items: center;
             background-image: url(./img/background.jfif);
             background-repeat: no-repeat;
@@ -54,7 +54,7 @@
             margin-bottom: 10px;
             padding-top: 20px;
         }
-        input{
+        .input{
             height: auto;
             border: none;
             border-radius: 10px;
@@ -102,23 +102,24 @@
 </head>
 <body>
     <div class="container">
-       <div class="nav-container">
+        <div class="nav-container">
                 <a href="index.html">Home</a>
                 <a href="product.html">Products</a>
                 <a href="aboutUs.html">About Us</a>
                 <a href="registerLogin.html">Register/Login</a>
                 <a href="cart.html"><i class="fa fa-cart-plus" style="font-size:36px"></i></a>
         </div>
+        <div class="count"><input type="text" id="field" readonly value="0"></div>
     <div class="section-container">
         <div class="form-container">
       
             <div class="form">
                 <h1 id="signUp">Sign Up</h1>
-                <label>First Name:</label><input type="text" id="firstName" placeholder="Enter first Name">
-                <label>Last Name:</label><input type="text" id="lastName" placeholder="Enter last Name">
-                <label>Email:</label><input type="email" id="signUpmail" placeholder="Enter your email">
-                <label>Password:</label><input type="password" id="signUppass" placeholder="Enter your password">
-                <label>Confirm Password</label><input type="password" id="confpass" placeholder="Enter confirm password">
+                <label>First Name:</label><input type="text" id="firstName" placeholder="Enter first Name" class="input">
+                <label>Last Name:</label><input type="text" id="lastName" placeholder="Enter last Name" class="input">
+                <label>Email:</label><input type="email" id="signUpmail" placeholder="Enter your email" class="input">
+                <label>Password:</label><input type="password" id="signUppass" placeholder="Enter your password" class="input">
+                <label>Confirm Password</label><input type="password" id="confpass" placeholder="Enter confirm password" class="input">
                 <center><button id="conBtn" onclick="signUp()">Confirm</button> </center>
             </div>
             
@@ -127,8 +128,8 @@
         <div class="sec-container">
             <div class="form">
             <h1 id="login">Login</h1>
-            <label>Email:</label><input type="email" id="lemail" placeholder="Enter email">
-            <label>Password:</label><input type="password" id="lpass" placeholder="Enter password">
+            <label>Email:</label><input type="email" id="lemail" placeholder="Enter email" class="input">
+            <label>Password:</label><input type="password" id="lpass" placeholder="Enter password" class="input">
             <center><button id="loginBtn" onclick="login()">Login</button></center>
             </div>
 
@@ -154,8 +155,8 @@
             <p>Email:shop@gmail.com</p>
             <p>Address:Yangon,Myanmar</p>
         </div>
-
     </div>
+
 <script src="reg-login.js"></script>
 <script src="product.js"></script>
 </body>
